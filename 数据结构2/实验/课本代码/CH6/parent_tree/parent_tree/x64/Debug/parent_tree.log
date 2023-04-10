@@ -1,0 +1,34 @@
+﻿  TestChildParentTree.cpp
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\TestChildParentTree.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\Assistance.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\Node.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTreeNode.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(133,27): error C2065: “treeSize”: 未声明的标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(133,27): error C3861: “treeSize”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(143,25): error C2065: “treeSize”: 未声明的标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(143,25): error C3861: “treeSize”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(158,9): error C3861: “DestroyTree”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(158,20): message : “DestroyTree”: 函数声明必须可用，因为所有参数都不依赖于模板参数
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(161,13): error C3861: “elemList”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(162,13): error C3861: “parent”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(163,13): error C3861: “nodeTable”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(164,13): error C3861: “treeSize”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(165,13): error C3861: “rootNode”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(168,17): error C3861: “elemList”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(169,17): error C3861: “parent”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(170,17): error C3861: “nodeTable”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(170,38): error C2065: “elemList”: 未声明的标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(170,38): error C3861: “elemList”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(171,17): error C3861: “nodeTable”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(171,40): error C2065: “parent”: 未声明的标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(171,40): error C3861: “parent”: 找不到标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(161,13): error C2065: “elemList”: 未声明的标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(162,13): error C2065: “parent”: 未声明的标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(163,13): error C2065: “nodeTable”: 未声明的标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(164,13): error C2065: “treeSize”: 未声明的标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(165,13): error C2065: “rootNode”: 未声明的标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(168,17): error C2065: “elemList”: 未声明的标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(169,17): error C2065: “parent”: 未声明的标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(170,17): error C2065: “nodeTable”: 未声明的标识符
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\parent_tree\parent_tree\ParentTree.h(171,17): error C2065: “nodeTable”: 未声明的标识符

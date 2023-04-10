@@ -1,0 +1,199 @@
+
+
+
+
+实验一
+VMware的安装和使用
+
+
+
+
+
+1.实验目的
+本次实验需要学生掌握在计算机上安装VMware workstation（或者其它虚拟机），安装一台CentOS（或者其它linux系统）虚拟机，来学习VMware的安装和使用。通过这些实验学习虚拟机的相关知识，例如如何创建、克隆和管理虚拟机。建立虚拟机集群，为以后更复杂的实验打好基础。
+现在容器大量使用，特别是在智能计算等领域。请将这些实验在容器上也做一下。
+注：很多同学还没有系统学习linux，请耐心实践，仔细阅读屏幕输出，可以根据输出在网络上寻找答案。本实验的例子使用的linux版本比较老，如果同学们使用新版本，一些指令已经发生变化，请在网络上寻找正确指令。
+
+2.VMware介绍
+VMware Workstation是一款著名的桌面虚拟计算机软件，提供了用户在单一的桌面上同时运行不同操作系统，和进行开发、测试、部署新的应用程序的最佳解决方案。VMware可在一台实体机上模拟完整的网络环境，创建便于携带的虚拟机器。对于企业的 IT开发人员和系统管理员而言， VMware在虚拟网路，实时快照，拖曳共享文件夹，支持 PXE 等方面的特点使它成为必不可少的工具。
+VMware Workstation允许操作系统和应用程序在一台虚拟机内部运行。虚拟机是独立运行主机操作系统的离散环境。在 VMware Workstation 中，你可以在一个窗口中加载一台虚拟机，它可以运行自己的操作系统和应用程序。你可以在运行于桌面上的多台虚拟机之间切换，通过一个网络共享虚拟机(例如一个公司局域网)，挂起和恢复虚拟机以及退出虚拟机，这一切不会影响你的主机操作和任何操作系统或者其它正在运行的应用程序。
+
+3.	实验环境
+1) 硬件环境：计算机一台；
+2) 软件环境： Win操作系统；
+4.实验内容
+注：由于实验室的PC已经安装了虚拟机，实验1）请同学们利用自己的设备安装。
+此外希望同学们自备8G以上U盘或者上传到百度、360云盘，将后面所有实验自行保存，以备下次使用。软件下载见本文档最后部分。
+1)VMware安装
+
+打开VMware-workstation-full-10.0.0-1295980.exe，根据提示将VMware安装在计算机上。
+
+
+2)CentOS虚拟机的安装
+
+CentOS介绍
+CentOS(Community Enterprise Operating System)是Linux的发行版之一，它是来自于Red Hat Enterprise Linux依照开放源代码规定释出的源代码所编译而成。由于出自同样的源代码，因此有些要求高度稳定性的服务器以CentOS替代商业版的Red Hat Enterprise Linux使用。
+
+
+
+1.打开VMware，在“主页”选项卡中选择“创建新的虚拟机”。
+2.选择 典型->下一步->安装程序光盘映像文件->浏览->选择“CentOS-6.5-x86_64-LiveCD.iso”//参见问题汇总
+3.选择版本为CentOS64位
+4.为虚拟机命名并选择安装位置（新建文件夹用于存放）
+5.设置最大磁盘大小，设为15.0GB 完成设置后点击“完成”
+
+
+
+6.在Vmware中找到新建的虚拟机选项卡，选择 开启此虚拟机
+7.首次运行见到了CentOS的桌面，由于用的是LiveCD，此时虚拟机并未安装完成，进入LiveCD的桌面系统后，打开 Install to Hard Drive进入CentOS Installer
+
+
+8.根据提示选择默认的语言，选择Basic Storage Devices并点击下一步，若出现警告，选择Yes。设置该机器的Hostname，选择时区，并设置Root Password。在接下来的窗口中选择 Replace Existing Linux System(s)，点击next，在弹出的警告中选择Write changes to disk。系统将开始自动安装CentOS。
+提示重启，回到桌面点击System，选择Shutdown->Restart 
+9.在登录界面中用刚才设置的密码登录新建立的用户。至此完成CentOS的安装
+
+	
+3)建立2个虚拟机之间的虚拟网络
+为实现虚拟机间的网络互通，我们将使用nat方式连接网络
+网络地址转换(NAT,Network Address Translation)属接入广域网(WAN)技术，是一种将私有（保留）地址转化为合法IP地址的转换技术，它被广泛应用于各种类型Internet接入方式和各种类型的网络中。原因很简单，NAT不仅完美地解决了lP地址不足的问题，而且还能够有效地避免来自网络外部的攻击，隐藏并保护网络内部的计算机。
+目标：建立2个虚拟机，按照下方表格分配静态并设置host name，当2台虚拟机同时运行时，使得相互之间可以ping通。(注意：具体实验时采取的网段需要根据具体情况，需要参考安装主机的NAT配置情况)
+host name	ip address 
+Master	192.168.224.130
+slave1	192.168.224.201
+注：此处的ip地址可以自行规划，此处为示例
+1.配置vmware网络，选择编辑->虚拟网络编辑器
+点击VNnet8 NAT一行，根据下图设置
+点击NAT设置，根据下图设置，注意要确保网关与子网在同一网段（此处意为“192.168.224前三个数字相同”）,此外为了和其它网络冲突，虚拟机网关（192.168.224.2）设置没有采用习惯的1或者254网址。此处网址设置请同学自己查找资料学习关于网络IP设置，网关等方面的知识。
+
+开始菜单->运行->services.msc或从控制面板中找到“服务”一项打开如下图所示，找到以vmware开头的服务，确保都启用
+2.打开虚拟机，运行applications->system tools->terminal，并在termial中输入如下命令
+su – 
+（切换为超级用户，根据提示输入之前设定的密码，密码输入时不可见，输入完回车即可，成功超级用户的标志为$变为#，输入exit即可退出）
+关闭防火墙：
+/sbin/service iptables stop;chkconfig --level 35 iptables off
+关闭SELINUX：
+vim /etc/selinux/config 修改令SELINUX=disabled
+修改hostname：
+vim /etc/sysconfig/network 
+内容改为
+
+配置centos网络：
+vim /etc/sysconfig/network-scripts/ifcfg-eth0
+修改（或者说是输入）
+DEVICE=eth0
+TYPE=Ethernet
+ONBOOT=yes
+NM_CONTROLLED=yes
+BOOTPROTO=static
+BROADCAST=192.168.224.225 
+IPADDR=192.168.224.130 
+NETMASK=255.255.255.0
+NETWORK=192.168.224.0 
+GATEWAY=192.168.224.2 
+
+修改hosts映射：
+vim /etc/hosts
+修改内容为
+192.168.224.130 master
+192.168.224.201 slave1
+192.168.224.202 slave2
+重启网络功能：
+service network restart
+3.复制两台虚拟机
+找到虚拟机保存的目录，直接复制两份虚拟机（先前建立的名为centos的文件夹）重命名为centos1和centos2
+打开vmware workstation界面，选择打开虚拟机，并分别打开centos1和centos2,会出现提示警告询问该虚拟机是否是复制过来的，选择是
+接下来以slave1为例修改第二台虚拟机，目的是修改ip和host name（由于是复制的虚拟机，此时ip和host name仍然是先前master的，因此要修改为我们所希望的slave1的ip和host name）
+su – 
+输入密码
+修改ip：
+vim /etc/sysconfig/network-scripts/ifconfig-eth0
+将IPADDR=后的ip改为192.168.224.201
+修改hostname：
+vim /etc/sysconfig/network
+修改修改为
+NETWORKING=yes
+HOSTNAME=slave1
+全部设置完成后重启虚拟机，至此slave1设置完毕，同理设置slave2
+这些设置完成后，同时开启2台虚拟机时可以相互ping通
+例：ping slave1
+4）实现SSH和RSH互通
+1.相关知识介绍
+SSH 
+SSH 为 Secure Shell 的缩写，由 IETF 的网络工作小组（Network Working Group）所制定；SSH 为建立在应用层和传输层基础上的安全协议。SSH 是目前较可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用 SSH 协议可以有效防止远程管理过程中的信息泄露问题。
+RSH
+RSH是“remote shell”（远程 shell）的缩写，该命令在指定的远程主机上启动一个shell并执行用户在rsh命令行中指定的命令；如果用户没有给出要执行的命令，rsh就用rlogin命令使用户登录到远程机上。
+1.SSH无密码互访配置
+该实验请用root账号操作。
+CentOS已经默认安装了OpenSSH，首先检查ssh服务是否启用
+在terminal中输入：
+chkconfig --list |grep sshd
+若显示
+sshd 0:off 1:off 2:off 3:off 4:off 5:off 6:off 则表明未启用
+启动ssh服务
+/etc/init.d/sshd start
+或 设置ssh为开机自动启动
+chkconfig --level 35 sshd on（需要进入超级用户su -）
+ssh无密码验证原理：
+节点A要实现无密码公钥认证连接到节点B上时，节点A是客户端，节点B是服务端，需要在客户端A上生成一个密钥对，包括一个公钥和一个私钥，而后将公钥复制到服务端B上。当客户端A通过ssh连接服务端B时，服务端B就会生成一个随机数并用客户端A的公钥对随机数进行加密，并发送给客户端A。客户端A收到加密数之后再用私钥进行解密，并将解密数回传给B，B确认解密数无误之后就允许A进行连接了。这就是一个公钥认证过程，其间不需要用户手工输入密码。重要过程是将客户端A公钥复制到B上。
+2.令2台虚拟机各自生成密钥对，将各自的公钥传到同一台虚拟机中合并生成key，具体步骤如下：
+同时打开2台虚拟机
+修改2台虚拟机的ssh配置文件
+vim /etc/ssh/sshd_config
+找到下列行 去掉注释符号#
+RSAAuthentication yes （允许RSA认证）
+PubkeyAuthentication yes   （允许公钥认证）
+AuthorizedKeysFile .ssh/authorized_keys  （公钥存放在.ssh/au..文件中）
+	   	  修改后需要重启ssh：
+/sbin/servive sshd restart
+分别在2台虚拟机上生成密码对，运行下列命令
+ssh-keygen -t rsa
+（可在默认路径~/.ssh/下生成私钥id_rsa公钥id_rsa.pub，用ls -a 可以查看.ssh目录）
+将所有虚拟机的公钥传送到一起，目的是生成一个authorized_keys文件，包含所有机器的公钥，不妨将公钥都发送到master上
+使用scp命令（用来实现局域网内不同linux系统间传送文件）
+scp id_rsa.pub root@master:/root/.ssh/ id_rsa.pub.slave1
+（在slave1上操作时，向master发送公钥，为了不与master的公钥重复，因此在最后加上.slave1作为标识，slave2同理，）
+scp便是利用ssh在linux主机间传送文件的命令，若出现Host key verification failed.参照问题汇总
+生成authorized_keys：
+此时在master的/root/.ssh/ 至少应该有id_rsa.pub.slave1 id_rsa.pub.slave2和id_rsa.pub三个文件
+cd ~/.ssh/
+cat id_rsa.pub >> authorized_keys 
+cat id_rsa.pub.slave1 >> authorized_keys
+cat id_rsa.pub.slave2 >> authorized_keys
+将三个公钥内容添加到同一文件authorized_keys中
+
+此时，拥有该文件的虚拟机可以被另两台虚拟机直接登录，实现了ssh无密码验证互通，将此文件发送给slave1和slave2的/root/.ssh后，使2台虚拟机用root用户可以直接都可相互登录。
+scp authorized_keys slave1:/root/.ssh/authorized_keys
+scp authorized_keys slave2:/root/.ssh/authorized_keys
+		  此时在master或slave2的terminal中输入ssh slave1，便可以登录slave1
+		  以此类推
+5）使用ssh实现windows主机与linxu虚拟机文件互传
+下载安装SSH Secure Shell Client 3.2.9  http://xiazai.zol.com.cn/detail/38/372685.shtml
+在实现互传文件之前先要令主机（此处使用windows 7）和虚拟机ping通
+在cmd中输入ipconfig查看本机ip，在terminal中输入ifconfig查看虚拟机ip
+1.关闭windows防火墙
+2.更改虚拟网卡设置 在NAT的连接方式下，要使主机能够ping通虚拟机，需要保证VMnet8虚拟网卡的ip地址和虚拟机的ip地址在同一网段中。打开网络与共享中心，更改适配器设置，找到VMnet8（对应NAT）设置其ipv4属性，将其修改至于虚拟机ip属于同一网段
+3.此时主机与虚拟机应当能够相互ping通，打开SSH Secure Shell Client，点击Quick Connect，在Host name中输入虚拟机ip，在User name中输入用户名，点击connect，输入密码，成功登录的标志为显示类似terminal中的输入提示符
+
+
+
+4.点击window->New File Transfer进入文件传输界面，左边为本机文件目录，右边为虚拟机的文件目录，可直接拖拽复制
+
+6）RSH互通
+该部分实验请同学自己查找资料实现。
+
+5.问题汇总
+1.CentOS-6.5-x86_64-bit-DVD 和 CentOS-6.5-x86_64-LiveCD的区别
+LiveCD 是可以直接在光盘上运行的版本，运行后可以再选择安装到硬盘中。
+而 bin-DVD 是一个纯安装版本，但是预包含了许多软件包。
+本文采用了LiveCD的iso文件来安装虚拟机，若使用binDVD来安装，其过程可能不会完全相同。
+iso文件下载	http://mirrors.163.com/centos/6.5/isos/x86_64/ 
+或直接进入CentOS官网http://www.centos.org/获取
+2.安装过程中若弹出如下警告窗口，选择yes
+
+3.关于vim的基本用法，可以在terminal中输入vimtutor习得
+注意在虚拟机用vi时从插入模式进入命令模式是使用“Ctrl+C”，然后输入：wq可以存盘退出
+4.若出现Host key verification failed
+su -
+vim etc/ssh/ssh_config 配置该文件
+StrictHostKeyChecking no
+UserKnownHostsFile /dev/null

@@ -1,0 +1,4 @@
+﻿  hellomp.c
+C:\Users\16011\Desktop\计算机系统结构\实验\实验2\hellomp\hellomp\hellomp.c(5,19): warning C4101: “tid”: 未引用的局部变量
+C:\Users\16011\Desktop\计算机系统结构\实验\实验2\hellomp\hellomp\hellomp.c(5,9): warning C4101: “nthreads”: 未引用的局部变量
+  hellomp.vcxproj -> C:\Users\16011\Desktop\计算机系统结构\实验\实验2\hellomp\x64\Debug\hellomp.exe

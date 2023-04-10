@@ -1,0 +1,3 @@
+﻿  TestBinaryTree.cpp
+C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\binary_tree\binary_tree\TestBinaryTree.cpp(6,34): warning C4101: “f”: 未引用的局部变量
+  binary_tree.vcxproj -> C:\Users\16011\Desktop\数据结构2\实验\课本代码\CH6\binary_tree\x64\Debug\binary_tree.exe
