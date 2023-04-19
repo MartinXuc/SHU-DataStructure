@@ -1,0 +1,7 @@
+(lparen,     ( )
+(ident,      x )
+(plus,       + )
+(ident,      y )
+(rparen,     ) )
+(times,      * )
+(ident,      z )
