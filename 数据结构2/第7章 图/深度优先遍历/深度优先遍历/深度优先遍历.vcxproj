@@ -19,11 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\SourceCode\AdjMatrixUndirGraph.h" />
-    <ClInclude Include="..\..\SourceCode\DFS.h" />
+    <ClInclude Include="AdjMatrixUndirGraph.h" />
+    <ClInclude Include="Assistance.h" />
+    <ClInclude Include="DFS.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\SourceCode\TestDFS.cpp" />
+    <ClCompile Include="TestDFS.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

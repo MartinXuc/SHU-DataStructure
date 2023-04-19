@@ -1,0 +1,42 @@
+CONST
+    N = 10;
+VAR
+    a: ARRAY[0..N-1] OF INTEGER;
+    i, j, tmp: INTEGER;
+
+PROCEDURE Swap(VAR x, y: INTEGER);
+VAR
+    t: INTEGER;
+BEGIN
+    t := x; x := y; y := t;
+END;
+
+PROCEDURE Sort;
+BEGIN
+    FOR i := 0 TO N-2 DO
+        FOR j := 0 TO N-i-2 DO
+            IF a[j] > a[j+1] THEN
+                Swap(a[j], a[j+1]);
+            END;
+        END;
+    END;
+END;
+
+PROCEDURE Output;
+VAR
+    k: INTEGER;
+BEGIN
+    FOR k := 0 TO N-1 DO
+        WRITE(a[k], ' ');
+    END;
+END;
+
+BEGIN
+    RANDOMIZE;
+    FOR i := 0 TO N-1 DO
+        a[i] := RANDOM(100);
+    END;
+    Output;
+    Sort;
+    Output;
+END.

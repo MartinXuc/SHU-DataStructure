@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\SourceCode\TestAdjMatrixUndirGraph.cpp" />
+    <ClCompile Include="TestAdjMatrixUndirGraph.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\SourceCode\AdjMatrixUndirGraph.h" />
-    <ClInclude Include="..\..\SourceCode\Assistance.h" />
+    <ClInclude Include="AdjMatrixUndirGraph.h" />
+    <ClInclude Include="Assistance.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

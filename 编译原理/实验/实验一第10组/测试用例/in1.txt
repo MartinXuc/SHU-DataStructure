@@ -1,0 +1,22 @@
+CONST
+    n = 5;
+VAR
+    i, fact : INTEGER;
+PROCEDURE Fact;
+VAR
+    j : INTEGER;
+BEGIN
+    j := i;
+    fact := 1;
+    WHILE j > 0 DO
+        BEGIN
+            fact := fact * j;
+            j := j - 1;
+        END;
+END;
+
+BEGIN
+    i := n;
+    CALL Fact;
+    WRITE(fact);
+END.

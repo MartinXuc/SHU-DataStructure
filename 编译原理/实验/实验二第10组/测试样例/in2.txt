@@ -1,0 +1,15 @@
+CONST
+    n = 10;
+VAR
+    i, j, k, fact;
+BEGIN
+    i := 0;
+    j := 1;
+    fact := 1;
+    WHILE i < n DO
+        i := i + 1;
+        fact := fact * i;
+        k := j + fact;
+        j := k - j;
+    END;
+END.

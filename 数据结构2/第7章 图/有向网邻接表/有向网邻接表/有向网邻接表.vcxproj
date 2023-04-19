@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\SourceCode\AdjListDirNetwork.h" />
-    <ClInclude Include="..\..\SourceCode\AdjListDirNetworkArc.h" />
-    <ClInclude Include="..\..\SourceCode\AdjListDirNetworkVex.h" />
-    <ClInclude Include="..\..\SourceCode\Assistance.h" />
+    <ClInclude Include="..\AdjListDirNetwork.h" />
+    <ClInclude Include="..\AdjListDirNetworkArc.h" />
+    <ClInclude Include="..\AdjListDirNetworkVex.h" />
+    <ClInclude Include="..\Assistance.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\SourceCode\TestAdjListDirNetwork.cpp" />
+    <ClCompile Include="..\TestAdjListDirNetwork.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

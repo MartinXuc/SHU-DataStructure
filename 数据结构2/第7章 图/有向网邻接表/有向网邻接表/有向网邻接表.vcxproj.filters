@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\SourceCode\AdjListDirNetwork.h">
+    <ClInclude Include="..\AdjListDirNetwork.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\SourceCode\AdjListDirNetworkArc.h">
+    <ClInclude Include="..\AdjListDirNetworkArc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\SourceCode\AdjListDirNetworkVex.h">
+    <ClInclude Include="..\AdjListDirNetworkVex.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\SourceCode\Assistance.h">
+    <ClInclude Include="..\Assistance.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\SourceCode\TestAdjListDirNetwork.cpp">
+    <ClCompile Include="..\TestAdjListDirNetwork.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

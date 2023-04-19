@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\SourceCode\TestAdjMatrixUndirGraph.cpp">
+    <ClCompile Include="TestAdjMatrixUndirGraph.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\SourceCode\AdjMatrixUndirGraph.h">
+    <ClInclude Include="AdjMatrixUndirGraph.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\SourceCode\Assistance.h">
+    <ClInclude Include="Assistance.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

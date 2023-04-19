@@ -1,0 +1,14 @@
+CONST
+    a = 1, b = 2;
+VAR
+    x, y, z;
+PROCEDURE Add;
+BEGIN
+    z := x + y;
+END;
+BEGIN
+    x := a;
+    y := b;
+    CALL Add;
+    WRITE z;
+END.

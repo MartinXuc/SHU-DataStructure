@@ -1,0 +1,10 @@
+CONST
+    n = 6;
+VAR
+    i, j, k, fact;
+BEGIN
+    i := 0;
+    j := 1;
+    k := 2;
+    fact := i * j + k;
+END.

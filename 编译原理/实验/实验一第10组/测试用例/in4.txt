@@ -1,0 +1,25 @@
+CONST
+    MAX = 100;
+VAR
+    sum, i, n: INTEGER;
+    
+PROCEDURE calculateSum;
+VAR
+    j: INTEGER;
+BEGIN
+    sum := 0;
+    FOR j := 1 TO n DO
+        sum := sum + j;
+    END;
+END;
+
+BEGIN
+    WRITE('Please enter a number: ');
+    READ(n);
+    calculateSum();
+    WRITE('The sum from 1 to ');
+    WRITE(n);
+    WRITE(' is ');
+    WRITE(sum);
+    WRITE('.');
+END.
