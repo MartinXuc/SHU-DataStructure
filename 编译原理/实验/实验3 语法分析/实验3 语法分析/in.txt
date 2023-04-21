@@ -1,6 +1,1 @@
-(lparen,     ( )
-(ident,      x )
-(plus,       + )
-(ident,      y )
-(minus,      - )
-(ident,      z )
+(number,    10 )
