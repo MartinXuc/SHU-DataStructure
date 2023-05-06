@@ -1,5 +1,9 @@
 #include "BinaryTree.h"
 
+/*
+判别给定二叉树是否为二叉排序树
+*/
+
 template <class ElemType>
 bool IsBinSortTree(const BinaryTree<ElemType>& bt)
 {

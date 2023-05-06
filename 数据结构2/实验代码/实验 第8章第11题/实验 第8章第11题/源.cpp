@@ -1,5 +1,11 @@
 #include "BinaryAvlTree.h"				// 二叉平衡树类
 
+/*
+假设平衡二叉树中，
+每个结点都标明了该节点的平衡因子bf。
+请试设计一个算法，利用平衡因子求平衡二叉树的高度。
+*/
+
 template<class ElemType>
 int GetHeight(BinaryAVLTree<ElemType>& bt)
 {

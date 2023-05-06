@@ -1,5 +1,12 @@
 #include "BinaryAvlTree.h"
 
+/*
+在平衡二叉排序树的每个结点中增设一个lsize域，
+其值为该结点左子树中的节点数加1。
+试写一个时间复杂度为O(logn)的算法，
+确定树中第k小结点的位置
+*/
+
 template<class ElemType>
 BinAVLTreeNode<ElemType>* kth_Smallest(BinaryAVLTree<ElemType> &bt, int k)
 {
