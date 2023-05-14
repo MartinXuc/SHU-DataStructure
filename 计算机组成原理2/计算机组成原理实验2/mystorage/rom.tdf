@@ -1,0 +1,26 @@
+entity rom is
+    port (
+        address : in std_logic_vector(12 downto 0);
+        chip_select : in std_logic;
+        data_out : out std_logic_vector(7 downto 0)
+    );
+end entity;
+
+architecture rtl of rom is
+    type rom_array is array (0 to 8191) of std_logic_vector(7 downto 0);
+    constant rom_contents : rom_array := (
+        -- 在这里填入你的ROM数据，共8192个8位数据
+        -- 例如: "00000000", "00000001", "00000010", ...
+    );
+
+begin
+    process (address, chip_select)
+    begin
+        if chip_select = '1' then
+            data_out <= rom_contents(to_integer(unsigned(address)));
+        else
+            data_out <= (others => 'Z'); -- 禁止输出
+        end if;
+    end process;
+
+end architecture;

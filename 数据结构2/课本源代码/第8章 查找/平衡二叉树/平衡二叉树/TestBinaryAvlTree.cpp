@@ -5,8 +5,8 @@ int main(void)
     try									// 用try封装可能出现异常的代码
 	{
 		BinaryAVLTree<int> bt;
-		int elem[] = {11, 39, 23, 68, 85, 8, 3, 46, 27, 50};
-		int n = 10;
+		int elem[] = {25, 11, 57, 32, 48, 63, 50, 74, 69};
+		int n = 9;
 		
 		cout << "从空树开始依次插入元素{11, 39, 23, 68, 85, 8, 3, 46, 27, 50}，构造二叉平衡树。" << endl;		
 		for (int i = 0; i < n; i++) {
@@ -46,20 +46,15 @@ int main(void)
 		cout<<endl;
 		system("PAUSE");				// 调用库函数system()
 
-		bt.Insert(25);					
-		cout << "插入数据元素25后:" << endl;
+
+		bt.Delete(57);					
+		cout << "删除数据元素57后:" << endl;
 		DisplayBTWithTreeShape(bt);
 		cout << endl;
 		system("PAUSE");				// 调用库函数system()
 
-		bt.Delete(23);					
-		cout << "删除数据元素23后:" << endl;
-		DisplayBTWithTreeShape(bt);
-		cout << endl;
-		system("PAUSE");				// 调用库函数system()
-
-		bt.Delete(8);					
-		cout << "删除数据元素8后:" << endl;
+		bt.Delete(25);					
+		cout << "删除数据元素25后:" << endl;
 		DisplayBTWithTreeShape(bt);
 		cout << endl;
 	}
