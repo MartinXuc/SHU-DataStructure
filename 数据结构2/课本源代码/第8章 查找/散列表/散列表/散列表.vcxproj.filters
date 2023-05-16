@@ -21,6 +21,9 @@
     <ClInclude Include="ClosedHashTable.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Triple.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TestClosedHashTable.cpp">

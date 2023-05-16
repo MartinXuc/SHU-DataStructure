@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClInclude Include="Assistance.h" />
     <ClInclude Include="ClosedHashTable.h" />
+    <ClInclude Include="Triple.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TestClosedHashTable.cpp" />
