@@ -1,7 +1,7 @@
 #include"BinarySortTree.h"
 /*
-题目：编写递归算法，从大到小输出二叉排序树中所有关键字
-不小于x的数据元素。要求算法的时间复杂度为O(logn+m)，
+题目：编写递归算法，从大到小输出二叉排序树中所有关键字不小于x的数据元素。
+要求算法的时间复杂度为O(logn+m)，
 其中n为二叉排序树中所含的节点数，m为输出的数据元素个数
 */
 template<class ElemType>
@@ -21,8 +21,8 @@ void myprint(BinTreeNode<ElemType>* p, ElemType x)
 		myprint(p->rightChild, x);
 	else
 	{
-		myprint(p->rightChild, x);
-		cout << p->data<<'\t';
+		myprint(p->rightChild, x);	//查找的次数与树的高度相关，时间复杂度为 log n
+		cout << p->data<<'\t'; 		//这部分会执行m次，也就是时间复杂度中的“ +m ”
 		myprint(p->leftChild, x);
 	}
 }

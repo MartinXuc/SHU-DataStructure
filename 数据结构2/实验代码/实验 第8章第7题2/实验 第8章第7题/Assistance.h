@@ -16,6 +16,7 @@
 #include <iomanip>					// 输入输出流格式设置	
 #include <cstdarg> 					// 支持变长函数参数	
 #include <cassert>					// 支持断言
+#include <vector>
 using namespace std;				// 标准库包含在命名空间std中
 
 // 自定义类型

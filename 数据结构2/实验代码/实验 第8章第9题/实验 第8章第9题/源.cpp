@@ -5,7 +5,7 @@
 其值为该结点左子树中的节点数加1。
 试写一个时间复杂度为O(logn)的算法，
 确定树中第k小结点的位置
-*/
+*/  
 
 template<class ElemType>
 BinAVLTreeNode<ElemType>* kth_Smallest(BinaryAVLTree<ElemType> &bt, int k)
@@ -17,8 +17,9 @@ BinAVLTreeNode<ElemType>* kth_Smallest(BinaryAVLTree<ElemType> &bt, int k)
 template <class ElemType>
 BinAVLTreeNode<ElemType>* kth_Smallest(BinAVLTreeNode<ElemType>* p,int k)
 {
+	//p的lsize意味着，p的左边有lsize-1个结点，p是以p为根的子树上第lsize小的结点
 	if (p == NULL)return NULL;
-	if (k == p->lsize) return p;//p的lsize意味着，p的左边有lsize-1个结点，p是以p为根的子树上第k小的结点
+	if (k == p->lsize) return p;//lsize的值就是k，说明找到了答案
 	else if (k <= p->lsize) kth_Smallest(p->leftChild, k);//p的lsize大于k，那么答案肯定在p的左子树上
 	else kth_Smallest(p->rightChild, k - p->lsize);//p的lsize小于k，答案肯定在右子树上，并且要求右子树上第k-lsize小的结点
 }

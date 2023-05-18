@@ -4,26 +4,33 @@
 判别给定二叉树是否为二叉排序树
 */
 
+
 template <class ElemType>
 bool IsBinSortTree(const BinaryTree<ElemType>& bt)
 {
-	BinTreeNode<ElemType>* p = bt.GetRoot();
-	return IsBinSortTree(p, INT_MIN, INT_MAX);
+	vector<ElemType> inorder;
+	inorderTraversal(bt.GetRoot(), inorder);
+	for (int i = 1; i < inorder.size(); i++) {
+		if (inorder[i] <= inorder[i - 1]) {
+			return false;
+		}
+	}
+	return true;
 }
 
-template <class ElemType>
-bool IsBinSortTree(BinTreeNode<ElemType>* p, int min_val, int max_val)
-//使用递归思想，参数为结点，最小值，最大值
+template<class ElemType>
+void inorderTraversal(BinTreeNode<ElemType>* p, vector<ElemType>& inorder)
 {
-	if (p == NULL)return true;
-	if (p->data < min_val || p->data > max_val)return false;//不在范围内
-	return IsBinSortTree(p->leftChild, min_val, p->data - 1)
-		&& IsBinSortTree(p->rightChild, p->data + 1, max_val);
+	if (p == NULL) return;
+	inorderTraversal(p->leftChild, inorder);
+	inorder.push_back(p->data);
+	inorderTraversal(p->rightChild, inorder);
 }
+
 
 int main()
 {
-	BinTreeNode<char>* p;
+	//BinTreeNode<char>* p;
 	BinaryTree<char> bt;
 	{
 		char pre[] = { '5','3','2','1','4','6','8','7','9' }; // 先序序列
